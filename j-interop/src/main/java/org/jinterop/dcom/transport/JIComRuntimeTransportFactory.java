@@ -25,9 +25,6 @@ public final class JIComRuntimeTransportFactory extends TransportFactory {
 
     private static JIComRuntimeTransportFactory factory = null;
 
-    private JIComRuntimeTransportFactory() {
-    }
-
     @Override
     public Transport createTransport(String address, Properties properties) throws ProviderException {
         return new JIComRuntimeTransport(address, properties);
