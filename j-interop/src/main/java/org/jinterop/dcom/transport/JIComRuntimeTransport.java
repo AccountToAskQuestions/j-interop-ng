@@ -88,6 +88,14 @@ public class JIComRuntimeTransport implements Transport {
    	 return (Socket) JISystem.internal_getSocket();
     }
 
+    protected Endpoint getEndpoint(PresentationSyntax syntax) throws Exception {
+        return new JIComRuntimeEndpoint(this, syntax);
+    }
+
+    protected Socket getSocket() throws Exception {
+        return (Socket) JISystem.internal_getSocket();
+    }
+
     @Override
     public void close() throws IOException {
         try {
