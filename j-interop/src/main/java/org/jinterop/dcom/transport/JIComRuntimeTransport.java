@@ -24,7 +24,6 @@ import java.util.Properties;
 import ndr.NdrBuffer;
 import org.jinterop.dcom.common.JISystem;
 import rpc.Endpoint;
-import rpc.ProviderException;
 import rpc.RpcException;
 import rpc.Transport;
 import rpc.core.PresentationSyntax;
@@ -42,8 +41,7 @@ public class JIComRuntimeTransport implements Transport {
     private InputStream input;
     private boolean attached;
 
-    protected JIComRuntimeTransport(String address, Properties properties)
-            throws ProviderException {
+    protected JIComRuntimeTransport(String address, Properties properties) {
         this.properties = properties;
         //address is ignored
     }
